@@ -11,7 +11,24 @@
 function nombreDeVoyelles(phrase) {
   // Exercice non implémenté : doit compter les voyelles
   // Placeholder neutre : retourne 0 pour indiquer non-implémentation
-  return 0;
+  if (typeof phrase !== "string") {
+    return 0;
+  }
+  const texte = phrase.toLowerCase();
+
+  // Définir les voyelles
+  const voyelles = "aeiouy";
+
+  // Compter les voyelles
+  let compteur = 0;
+  for (let i = 0; i < texte.length; i++) {
+    if (voyelles.includes(texte[i])) {
+      compteur++;
+    }
+  }
+
+  return compteur;
+
 }
 
 // Ne pas modifier la ligne ci-dessous
