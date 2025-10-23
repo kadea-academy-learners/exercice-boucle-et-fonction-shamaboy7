@@ -14,9 +14,11 @@ function multiplication(a, b) {
   // Vérifier les types
   if (typeof a !== 'number' || typeof b !== 'number') return undefined;
   if (isNaN(a) || isNaN(b)) return undefined;
-
-  return a * b;
+  const result = a * b;
+  return Object.is(result, -0)? 0: result;
 }
+
+multiplication(6,7);
 
 // Ne pas modifier la ligne ci-dessous
 module.exports = { multiplication }
