@@ -12,7 +12,14 @@
 function somme(n) {
   // Exercice non implémenté : retourner la somme de 1 à n
   // Placeholder neutre : retourne 0 pour indiquer non-implémentation
-  return 0;
+  if (typeof n !== "number" || n < 1 || !Number.isInteger(n)) {
+    return 0;
+  }
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i; // Ajouter chaque nombre à la somme
+  }
+  return total;
 }
 
 // Ne pas modifier la ligne ci-dessous
